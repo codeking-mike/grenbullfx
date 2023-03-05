@@ -9569,7 +9569,8 @@ a.text-dark:hover, a.text-dark:focus {
   --iframe-filter: grayscale(0%);
   --bg-grey: #f7f7f7;
   --bg-lightgrey: #f8f9fa;
-  --layer: rgba(29, 42, 55, 0.7); }
+  --layer: rgba(29, 42, 55, 0.7);
+  --layer2: rgba(29, 42, 0, 0.9);  }
 
 [data-theme="dark"] {
   --primary-color: #009f4d;
@@ -9699,6 +9700,12 @@ p.white {
     max-width: 1200px; } }
 
 /*-- //container --*/
+/*Dashboard Background */
+.dash{
+  position: relative;
+  width: 100%;
+  background-color: #040505;
+}
 .btn-style {
   padding: 15px 50px;
   font-size: 16px;
@@ -10357,7 +10364,7 @@ nav ul li a:hover {
   z-index: 12; }
 
 .hero-overlay {
-  background: var(--layer);
+  background: var(--layer2);
   position: absolute;
   left: 0;
   top: 0;
