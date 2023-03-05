@@ -141,6 +141,7 @@ include_once("auth.php");
                     <div class="card">
                         <div class="card-header">
                            <h4 class="card-title text-center">Investments</h4>
+                           <a href="invest.php" class="btn btn-info text-white"><i class="now-ui-icons arrows-1_minimal-left"></i>Invest</a>
                         </div>
                         <div class="card-body">
                             <!-- Tab links -->

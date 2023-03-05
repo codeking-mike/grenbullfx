@@ -42,24 +42,12 @@ include_once("auth.php");
       <div class="row">
             <div class="col-sm-12 mb-4 mb-xl-0">
                 <div class="card">
-                    <div class="card-header">
-                    <h4 class="font-weight-bold">Hi, <?php echo $firstname ?></h4>
-                    </div>
+                    
                     <div class="card-body">
-                    <p class="font-weight-normal mb-2 text-muted text-white"><?php echo date("Y-m-d H:i:s"); ?></p>
+                   
 			        <p><span style='color:#f98604'>To start trading and investing, you have to add funds to your account. </span></p>
                     
-                    <div class="card ">
-                      <div class="card-body bg-danger">
-                          <h4 class="card-title text-center text-white">Account Balance</h4>
-                          
-                          <h4 class="text-white font-weight-bold mb-2 text-center">N<?php echo $account_balance ?></p></h4>
-                          
-                                           
                     
-                       
-                      </div>
-                    </div>
                     </div>
                 </div>
                 <div class="card">
@@ -110,7 +98,7 @@ include_once("auth.php");
                   <?php
                             }else{
                   ?>
-                  <option value="bank">Bank Transfer</option>
+                 
                   <option value="wallet">Wallet Deposit</option>
                   <option value="momo">Momo Deposit</option>
                   <?php
@@ -123,7 +111,7 @@ include_once("auth.php");
 				  <label>Amount</label>
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <span class="input-group-text bg-info text-white bg-danger">&#8358;</span>
+                        <span class="input-group-text bg-info text-white bg-danger">CFA</span>
                       </div>
 					   
                       <input type="text" name="amount" class="form-control .form-control-lg" aria-label="Amount (to the nearest dollar)" required>

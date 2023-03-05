@@ -15,6 +15,18 @@
              <p>Dashboard</p>
            </a>
          </li>
+         <?php
+           if(isset($_SESSION['admin'])){
+         ?>
+         <li class="active ">
+           <a href="./management/">
+             <i class="now-ui-icons design_app"></i>
+             <p>Back to Admin</p>
+           </a>
+         </li>
+         <?php
+         }
+         ?>
          <li>
            <a href="./profile.php">
              <i class="now-ui-icons education_atom"></i>

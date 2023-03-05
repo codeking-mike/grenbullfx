@@ -28,7 +28,7 @@ session_start();
 
 <body class="">
   <div class="wrapper ">
-    <div class="sidebar" data-color="orange">
+    <div class="sidebar" data-color="yellow">
       <?php include("side.php"); ?>
     </div>
     <div class="main-panel" id="main-panel">

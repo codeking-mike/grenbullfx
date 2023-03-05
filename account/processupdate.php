@@ -7,9 +7,9 @@ include("auth.php");
 if(isset($_GET['cancel'])){
 	$trans = $_GET['cancel'];
 	
-	mysqli_query($cxn, "DELETE FROM client_investment WHERE fund_id ='$trans'");
+	mysqli_query($cxn, "DELETE FROM client_investment2 WHERE transid ='$trans'");
 	 $_SESSION['error'] = "Investment Canceled Successfully!"; 
-							            header("location:cancelinvestment.php");
+							            header("location:fundaccount.php");
                                         $stmt->close(); 
 										exit(0);
 	
@@ -683,7 +683,7 @@ $message .= "You didnt select any file for upload";
             		      exit(0); 
 }						  
 
-$query = "UPDATE client_investment2 SET pop='$pic' WHERE fund_id='$transid'";
+$query = "UPDATE client_investment2 SET pop='$pic' WHERE transid='$transid'";
 mysqli_query($cxn, $query);
 if(move_uploaded_file($_FILES['pop']['tmp_name'],$target))
 { 

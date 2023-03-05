@@ -327,7 +327,7 @@ if(isset($_GET['bn'])){
 	$check_result = mysqli_query($cxn, $check_query);
 	if(mysqli_num_rows($check_result) < 1) {
 
-		$message .= "You have mot invested in any of our plans. Kindly make an Investment";
+		$message .= "You have not invested in any of our plans. Kindly make an Investment";
 			        $_SESSION['error'] = $message;  
 			        header("location:referals.php");
 	                exit(0);

@@ -8,17 +8,7 @@ if($method == ''){
   exit(0);
 }
 
-$check_deposit = "SELECT pop FROM client_investment2 WHERE depositor='$user_id' AND payment_confirmed='no'";
-$check_result = mysqli_query($cxn, $check_deposit);
-if(mysqli_num_rows($check_result) > 0){
-    extract(mysqli_fetch_assoc($check_result));
-    
-    if($pop == ''){
-    
-    header("location:cancelinvestment.php");
-    
-    }
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -82,6 +72,43 @@ if(mysqli_num_rows($check_result) > 0){
 
       <?php
 		
+		   $check_deposit = "SELECT pop, deposit_amount FROM client_investment2 WHERE depositor='$user_id' AND payment_confirmed='no'";
+      $check_result = mysqli_query($cxn, $check_deposit);
+      if(mysqli_num_rows($check_result) > 0){
+          extract(mysqli_fetch_assoc($check_result));
+          
+          if($pop == ''){
+          
+          header("location:cancelinvestment.php");
+          
+          }else{
+     
+			  
+		?>
+		<div class="row">
+              
+            <div class="col-xl-9 d-flex grid-margin stretch-card">
+                <div class="card alert-info">
+                  <div class="card-body">
+                     <div class="row">
+                        <div class="col-lg-5">
+                          <p>Your deposit of <?php echo $deposit_amount ?>CFA has been received. Awaiting confirmation...</p>
+                        </div>
+                        
+                      </div>
+                      
+                        
+                    </div>
+                  </div>
+				  
+            </div>
+        </div>
+        <?php 
+			}
+    }
+		 ?>
+     <?php
+		
 		$check_msg = "SELECT * FROM client_withdrawals WHERE receiver='$user_id' AND completed='no'";
 																   $r = mysqli_query($cxn, $check_msg);
 																   if(mysqli_num_rows($r) > 0){
@@ -114,6 +141,7 @@ if(mysqli_num_rows($check_result) > 0){
         <?php 
 			}
 		 ?>
+      
         <?php
 		
 		$check_msg = "SELECT * FROM notifications WHERE receiver='$user_id' AND status='0'";
@@ -234,9 +262,9 @@ if(mysqli_num_rows($check_result) > 0){
                   </div>
                   <hr class="dark horizontal my-0">
                   <div class="card-footer p-3">
-                    <a href="fundaccount.php" style="width:30%" class="btn btn-warning"> <i class="now-ui-icons arrows-1_minimal-up"></i> &nbsp;&nbsp;Deposit</a>
-                    <a href="withdraw.php" style="width:30%" class="btn btn-danger"><i class="now-ui-icons arrows-1_minimal-down"></i> &nbsp;&nbsp;Withdraw</a>
-                    <a href="invest.php" style="width:30%" class="btn btn-warning"><i class="now-ui-icons arrows-1_minimal-right"></i> &nbsp;&nbsp;Invest</a>
+                    <a href="fundaccount.php" style="width:30%" class="btn btn-warning"> <i class="now-ui-icons arrows-1_minimal-up"></i> &nbsp;Deposit</a>
+                    <a href="withdraw.php" style="width:30%" class="btn btn-danger"><i class="now-ui-icons arrows-1_minimal-down"></i> &nbsp;Withdraw</a>
+                    <a href="invest.php" style="width:30%" class="btn btn-warning"><i class="now-ui-icons arrows-1_minimal-right"></i> &nbsp;Invest</a>
                   
                   </div>
                 </div>

@@ -113,8 +113,8 @@ alert("Successful!");
               <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                 <div class="bg-warning shadow-info border-radius-lg py-3 pe-1" style="padding:5em">
                   <h5 class="text-dark font-weight-bolder text-center mt-2 mb-0">Contact Support</h5>
-                  <p>Send us a message if you any enquiries or if you encounter an error</p>
-                  
+                  <p>Send us a message if you have any enquiries or if you encounter an error</p>
+                  <p><a href="inbox.php" class="text-white text-underline">View Inbox</a></p>
                 </div>
               </div>
               <div class="card-body">

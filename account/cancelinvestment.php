@@ -46,28 +46,9 @@ if(isset($_GET['trans'])){
       <div class="content">
       <div class="row">
             <div class="col-sm-12 mb-4 mb-xl-0">
-                <div class="card">
-                    <div class="card-header">
-                    <h4 class="font-weight-bold">Hi, <?php echo $firstname ?></h4>
-                    </div>
-                   
-                </div>
+                
                 <div class="col-md-8">
-                <?php
-				      if(isset($_SESSION['error'])){
-						  $msg = $_SESSION['error'];
-                        echo "
-                          <div class='alert alert-info'>
-                  <button type='button' aria-hidden='true' class='close'>
-                    <i class='now-ui-icons ui-1_simple-remove'></i>
-                  </button>
-                  <span>$msg.</span>
-                </div>";
-						  unset($_SESSION['error']);
-					  }
-				    
-				 
-				 ?>
+                
 			
             
             <?php  
@@ -82,14 +63,15 @@ if(isset($_GET['trans'])){
       
       ?>
         <div class="row mt-3">
-           <div class="col-md-6 grid-margin stretch-card">
+          
             <div class="col-sm-12 grid-margin stretch-card">
                   <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Pending Deposit</h4>
-                        <p>You have a pending deposit of <b>N<?php echo $deposit_amount ?></b>. Kindly make payment and upload a proof of payment OR Click below to cancel investment request.</p>
+                        <h5 class="card-title">Pending Deposit</h5>
+                        <hr />
+                        <p>You have a deposit of <b><?php echo $deposit_amount ?>CFA</b>. Kindly make payment and upload a proof of payment OR Click below to cancel investment request.</p>
                          
-                        <a href="processupdate.php?cancel=<?php echo $transid ?>" class="btn btn-danger btn-lg btn-block">CANCEL REQUEST</a>
+                        <a href="momo.php?trans=<?php echo $transid ?>&amt=<?php echo $deposit_amount ?>" class="btn btn-warning btn-lg btn-block">MAKE PAYMENT</a>
                         <?php
                             
                         ?>
@@ -98,7 +80,7 @@ if(isset($_GET['trans'])){
                     </div>
                   </div>
               </div>
-          </div>
+          
     
           
         </div>
@@ -130,11 +112,6 @@ if(isset($_GET['trans'])){
               
             </div>
         </div>
-        <div class="row">
        
-            
-         
-          
-        </div>
       </div>
       <?php include("footer.php"); ?>

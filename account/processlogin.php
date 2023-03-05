@@ -32,7 +32,7 @@ if(isset($_POST['login'])){
 									 }else{
 										if($admin=='yes'){
 											$_SESSION['admin'] = $id;
-											header("location:backend/");
+											header("location:./management/");
 											$stmt->close();   
 										}else{
 											$_SESSION['user'] = $id;

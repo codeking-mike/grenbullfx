@@ -47,11 +47,9 @@ if(isset($_GET['trans'])){
       <div class="row">
             <div class="col-sm-12 mb-4 mb-xl-0">
                 <div class="card">
-                    <div class="card-header">
-                    <h4 class="font-weight-bold">Hi, <?php echo $firstname ?></h4>
-                    </div>
+                    
                     <div class="card-body">
-                    <p class="font-weight-normal mb-2 text-muted text-white"><?php echo date("Y-m-d H:i:s"); ?></p>
+                    
 			        <p><span style='color:#f98604'>To complete your deposit kindly use the information below to make payment 
                     and upload a screenshot of payment for verification and confirmation. </span></p>
                     
@@ -65,7 +63,7 @@ if(isset($_GET['trans'])){
             <div class="card">
               <div class="card-header">
                 <h4>Momo Wallet Deposit</h4>
-                <p>Kindly deposit N<?php echo $amount ?> into the Momo Account below.</p>
+                <p>Kindly deposit <?php echo $amount ?>CFA into the Momo Account below.</p>
               </div>
             
               <div class="card-body">
@@ -81,25 +79,16 @@ if(isset($_GET['trans'])){
 					?>
 					<div class="col-md-12">
                   <div class="form-group" style='padding:5px;box-shadow:3px 5px #f2f2f6'>
-				  <p>Momo Name:<br>
-				  <input type="text" value="<?php echo $momo_name ?>" style="width:100%;background:#f98604;color:#fff" readonly /><br>
-				  
-				  </p>
-                  <p>Momo Number:<br>
-				  <input type="text" id="link" value="<?php echo $momo_number ?>" style="width:100%;background:#f98604;color:#fff" readonly /><br>
-				  <button id="copy" onclick="copyLink2()" class="btn btn-info">COPY</button>
-				  </p>
-                  <p>Momo Network:<br>
-				  <input type="text" value="<?php echo $network ?>" style="width:100%;background:#f98604;color:#fff" readonly /><br>
-				  
-				  </p>
+				  <p>Momo Name:<strong><?php echo $momo_name ?></strong><br>  </p>
+          <p>Momo Number:<strong><?php echo $momo_number ?></strong> </p>
+          <p>Momo Network:<strong><?php echo $network ?></strong></p>
 				  
 				  
 				  
                   </div>
                   </div>
 				<?php }  ?>
-			<p style="background:#fff;padding:20px;color:#000;margin:15px"><span style="color:#f00">Note: </span> Only send Bitcoin to the above address. Sending any other coin could lead to permanent loss. After payment kindly upload a screen shot for faster confirmation.</p>
+			<p style="background:#fff;padding:20px;color:#000;margin:15px"><span style="color:#f00">Note: </span> Send the correct amount to the momo account below. Sending any other amount could lead to permanent loss. After payment kindly upload a screen shot for faster confirmation.</p>
 				<form action="processupdate.php" method="post"  enctype="multipart/form-data">
                       <div class="col-md-12">
                         <div class="form-group">
